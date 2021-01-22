@@ -34,7 +34,7 @@ basic.forever(function () {
         Enemy.turn(Direction.Right, 90)
         for (let index = 0; index < 4; index++) {
             Enemy.move(1)
-            basic.pause(1000)
+            basic.pause(Time)
             if (Enemy.isTouching(Ship)) {
                 game.gameOver()
             }
@@ -45,6 +45,6 @@ basic.forever(function () {
     }
     Time += -100
     if (Time <= 100) {
-        Time = 500
+        Time = 200
     }
 })
